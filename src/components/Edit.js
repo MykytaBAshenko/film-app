@@ -46,7 +46,7 @@ export default class EditExercise extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:6000/'+this.props.match.params.id)
+        axios.get('http://localhost:3001/'+this.props.match.params.id)
         .then(response => {
             this.setState({
                 title: response.data.title,
@@ -110,7 +110,7 @@ export default class EditExercise extends Component {
             stars: film1.starsArr
         }
 
-        await axios.post('http://localhost:6000/update/' + this.props.match.params.id, film)
+        await axios.post('http://localhost:3001/update/' + this.props.match.params.id, film)
         .then(res => console.log(res.data));
 
         window.location = '/';

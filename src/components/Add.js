@@ -117,7 +117,7 @@ export default class Add extends Component {
             if (Object.keys(ObjectForSend).length === 4)
                 sendObj.push(ObjectForSend);
             if(this.state.errorFile === "" && x + 1 === arrwithstrs.length ) {
-                axios.post('http://localhost:6000/adding/',sendObj)
+                axios.post('http://localhost:3001/adding/',sendObj)
                 .then(res => this.setState({successFile: res.data.toString()}))
             }
             }
@@ -171,7 +171,7 @@ export default class Add extends Component {
             window.location = '/';
             film.stars = starsInput;
 
-            axios.post('http://localhost:6000/add/',film)
+            axios.post('http://localhost:3001/add/',film)
             .then(res => this.setState({inputSuck: res.data.toString()}));
 
             this.state.inputTitle = '';

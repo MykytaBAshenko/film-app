@@ -33,7 +33,7 @@ import axios from 'axios';
       }
 
       componentDidMount() {
-          axios.get('http://localhost:6000/')
+          axios.get('http://localhost:3001/')
           .then(
               response => {
                   this.setState({films: response.data})
@@ -45,7 +45,7 @@ import axios from 'axios';
       }
 
       deleteFilm(id) {
-          axios.delete('http://localhost:6000/' + id)
+          axios.delete('http://localhost:3001/' + id)
           .then(response => {console.log(response.data)});
 
           this.setState({
