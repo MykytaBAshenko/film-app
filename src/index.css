@@ -146,3 +146,13 @@ row-gap: 15px;
 display: grid;
 grid-template-columns: 1fr;
 }
+
+@media only screen and (max-width: 800px)  {
+    
+    .filmList {
+        grid-template-columns: 1fr;
+    }
+    .filmSearch{
+        grid-template-columns: 1fr;
+    }
+}
